@@ -1,0 +1,28 @@
+{
+    "name": "server-side-js",
+    "version": "1.0.0",
+    "description": "",
+    "main": "express.js",
+    "scripts": {
+        "dev": "nodemon express.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hunjunChoi/Server-side-JS.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hunjunChoi/Server-side-JS/issues"
+    },
+    "homepage": "https://github.com/hunjunChoi/Server-side-JS#readme",
+    "dependencies": {
+        "express": "^4.18.1",
+        "pug": "^3.0.2",
+        "underscore": "^1.13.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
+    }
+}
