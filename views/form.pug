@@ -1,0 +1,26 @@
+doctype html 
+html
+    head   
+        meta(charset="utf-8")
+        //- to show tag attribute... use ()
+    body 
+        //- aggregate all data want to send to form
+        //- let web brower know .... action
+        //- ready to send data to form_receiver 
+        //- have to let server know the data... put name="title" & ...
+
+        //- ignore method="get"... automatically get
+
+        //- post... data is sent to server 
+        //- not send by url... no query string 
+        form(action="/form_receiver" method="post")
+            //-  paragraph 
+            p 
+                //- get user control... use input 
+                input(type="text", name="title")
+            p 
+                //- show multiple lines... textarea
+                textarea(name="description")
+            p 
+                input(type="submit")
+            

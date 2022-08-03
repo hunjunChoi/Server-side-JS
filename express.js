@@ -22,6 +22,8 @@ app.set("views", "./views"); // this can be muted
 // express finds file in public directory
 app.use(express.static("public"));
 
+app.use(express.urlencoded({ extended: false }));
+
 //- express using pug tempalte engine
 //- ugly code <--> pretty or beautyfyl
 //- Google search: pug express code pretty
@@ -198,6 +200,40 @@ app.get("/topic/:id/:mode", (req, res) => {
     res.send(req.params.id + "," + req.params.mode);
     // url: /topic/1/edit
     // mode --> edit
+});
+
+// Form
+app.get("/form", (req, res) => {
+    res.render("form");
+});
+
+// router for form_receiver
+app.get("/form_receiver", (req, res) => {
+    // res.send("Hello GET");
+
+    const title = req.query.title;
+    const description = req.query.description;
+
+    res.send(title + ", " + description);
+
+    // Get method
+    /* 
+    query objet  --> desctiortion & title  */
+});
+
+app.post("/form_receiver", (req, res) => {
+    // how does app get data sent from the server
+
+    const title = req.body.title;
+    const description = req.body.description;
+
+    res.send(title + ", " + description);
+
+    /* POST
+    query --> X
+    body --> O 
+    
+    request object doesn't have body... --> need body-parser --> use body property*/
 });
 
 // use app --> make application
